@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explora en Profundidad – Historia de la Computación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* —— Reset & Global —— */
+    * {box-sizing: border-box; margin:0; padding:0;}
+    body {
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#f0f4ff,#cce1ff);
+      color:#333; overflow-x:hidden;
+    }
+    a {text-decoration:none; color:inherit;}
+
+    /* —— Header —— */
+    header {
+      background:linear-gradient(90deg,#2c3e50,#4ca1af);
+      padding:20px; position:sticky; top:0; z-index:10;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 2px 5px rgba(0,0,0,.2);
+    }
+    .header-logo {
+      position:absolute; left:20px; top:50%;
+      transform:translateY(-50%);
+      width:60px; height:60px; border-radius:50%; overflow:hidden;
+      background:#fff;
+    }
+    .header-logo img {width:100%; height:100%; object-fit:cover;}
+    nav ul {display:flex; list-style:none;}
+    nav li {margin:0 1em;}
+    nav a {
+      color:#fff; font-weight:500; transition:color .3s;
+    }
+    nav a:hover, .active a {color:#ffeb3b;}
+    .register-option {
+      position:absolute; right:20px; top:50%;
+      transform:translateY(-50%);
+    }
+    .register-link {
+      background:#001f3f; color:#fff; padding:.5em 1em; border-radius:5px;
+      transition:background .3s;
+    }
+    .register-link:hover {background:#003058;}
+
+    /* —— Sección Interactiva —— */
+    .interactive-cards {
+      max-width:1200px; margin:60px auto; padding:0 20px; text-align:center;
+    }
+    .interactive-cards h2 {
+      font-size:2.2rem; color:#2c3e50; margin-bottom:1.5em;
+    }
+    .cards-container {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+      gap:30px;
+    }
+    .card {perspective:1000px; height:340px;}
+    .card-inner {
+      position:relative; width:100%; height:100%;
+      transition:transform .6s; transform-style:preserve-3d; cursor:pointer;
+    }
+    .card:hover .card-inner,
+    .card-inner.touch-active {transform:rotateY(180deg);}
+    .card-front, .card-back {
+      position:absolute; width:100%; height:100%; backface-visibility:hidden;
+      border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.1);
+      display:flex; flex-direction:column; justify-content:center;
+      padding:20px; text-align:left; overflow:hidden;
+    }
+    .card-front {
+      background:#fff;
+    }
+    .card-front h3 {
+      margin-bottom:.5em; color:#4ca1af; font-size:1.4rem;
+    }
+    .card-front p {
+      font-size:.9rem; color:#555;
+    }
+    .card-back {
+      background:#4ca1af; color:#fff; transform:rotateY(180deg);
+      font-size:.9rem; line-height:1.5; overflow-y:auto;
+    }
+    .card-back h4 {
+      margin-bottom:.5em; font-size:1.2rem;
+    }
+    @media (hover:none) {
+      .card-inner {transition:none;}
+      .card {touch-action:manipulation;}
+    }
+
+    /* —— Footer —— */
+    footer {
+      background:#2c3e50; color:#fff; text-align:center;
+      padding:15px; box-shadow:0 -2px 5px rgba(0,0,0,.2);
+      margin-top:60px;
+    }
+    .social-media img {
+      width:30px; height:30px; margin:0 .3em;
+      transition:transform .3s;
+    }
+    .social-media img:hover {transform:scale(1.1);}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-logo">
+      <img src="Logo.png" alt="Logo de VisioComp">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="D:\paginap 2\paginita\index.html">Inicio</a></li>
+        <li><a href="D:\paginap 2\paginita\extras\linea de tiempo.html">Linea de Tiempo</a></li>
+        <li><a href="D:\paginap 2\paginita\extras\guayanay.html">Explorar</a>
+        <li class="active"></li><a href="D:\paginap 2\paginita\extras\poi.html">Quizz</a></li>
+      </ul>
+    </nav>
+    <div class="register-option">
+      <a href="Registro.html" class="register-link">Registrarse</a>
+    </div>
+  </header>
+
+  <!-- SECCIÓN INTERACTIVA -->
+  <section class="interactive-cards">
+    <h2>Explora Conceptos Clave</h2>
+    <div class="cards-container">
+
+      <!-- Arquitectura de Von Neumann -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Arquitectura de Von Neumann</h3>
+            <p>Unidad de Control, ALU y Memoria</p>
+          </div>
+          <div class="card-back">
+            <h4>Modelo Básico</h4>
+            La arquitectura de Von Neumann organiza el computador en:
+            <ul>
+              <li><strong>ALU</strong>: realiza operaciones aritméticas y lógicas.</li>
+              <li><strong>Unidad de Control</strong>: interpreta instrucciones.</li>
+              <li><strong>Memoria</strong>: almacena datos y programa en un mismo espacio.</li>
+            </ul>
+            Su concepto sigue vigente en la mayoría de CPUs modernas.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sistema Binario y Lógica -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Sistema Binario</h3>
+            <p>Lógica Digital</p>
+          </div>
+          <div class="card-back">
+            <h4>Cero y Uno</h4>
+            Todo dato en la computadora se codifica en bits:
+            <ul>
+              <li><strong>Puertas Lógicas</strong> (AND, OR, NOT) combinan bits.</li>
+              <li><strong>Flip-flops</strong> guardan estados binarios.</li>
+              <li><strong>Bytes y Palabras</strong> agrupan bits para formar instrucciones.</li>
+            </ul>
+            Este sistema habilita la velocidad y confiabilidad de lo digital.
+          </div>
+        </div>
+      </div>
+
+      <!-- Microprocesador & Ley de Moore -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Microprocesador</h3>
+            <p>Ley de Moore</p>
+          </div>
+          <div class="card-back">
+            <h4>Revolución del Chip</h4>
+            En 1971 Intel presentó el 4004, primer microprocesador en un solo chip.
+            <p>
+              <strong>Ley de Moore</strong>: el número de transistores en un chip se duplica aproximadamente cada 18 meses,
+              impulsando la potencia y reduciendo costos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sistemas Operativos -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Sistemas Operativos</h3>
+            <p>Gestión de Recursos</p>
+          </div>
+          <div class="card-back">
+            <h4>Software de Base</h4>
+            El sistema operativo coordina hardware y aplicaciones:
+            <ul>
+              <li><strong>Planificación de Procesos</strong>: multiprogramación y multitarea.</li>
+              <li><strong>Gestión de Memoria</strong>: paginación y segmentación.</li>
+              <li><strong>Sistemas de Archivos</strong>: organiza datos en disco.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Redes y Protocolos -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Redes y Protocolos</h3>
+            <p>TCP/IP & HTTP</p>
+          </div>
+          <div class="card-back">
+            <h4>Conectando el Mundo</h4>
+            Dos pilares de la Internet:
+            <ul>
+              <li><strong>TCP/IP</strong>: fragmenta datos en paquetes y asegura su entrega.</li>
+              <li><strong>HTTP/HTTPS</strong>: Protocolo de transferencia de hipertexto, base de la Web.</li>
+            </ul>
+            Juegan un rol esencial en streaming, IoT y APIs modernas.
+          </div>
+        </div>
+      </div>
+
+      <!-- Virtualización -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Virtualización</h3>
+            <p>Máquinas & Contenedores</p>
+          </div>
+          <div class="card-back">
+            <h4>Abstract Layer</h4>
+            Permite ejecutar múltiples entornos aislados:
+            <ul>
+              <li><strong>VMs</strong>: emulan hardware completo.</li>
+              <li><strong>Contenedores</strong>: comparten kernel, inician en segundos.</li>
+            </ul>
+            Base de la nube moderna y despliegues escalables.
+          </div>
+        </div>
+      </div>
+
+      <!-- Computación en la Nube -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Cloud Computing</h3>
+            <p>IaaS, PaaS & SaaS</p>
+          </div>
+          <div class="card-back">
+            <h4>Servicios On-Demand</h4>
+            Modelos de entrega:
+            <ul>
+              <li><strong>IaaS</strong>: infraestructura virtualizada.</li>
+              <li><strong>PaaS</strong>: plataforma de desarrollo gestionada.</li>
+              <li><strong>SaaS</strong>: aplicaciones listas para el usuario.</li>
+            </ul>
+            Facilita escalabilidad y reduce costos de capital.
+          </div>
+        </div>
+      </div>
+
+      <!-- Computación Cuántica -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Cuántica</h3>
+            <p>Qubits & Superposición</p>
+          </div>
+          <div class="card-back">
+            <h4>El Futuro del Cómputo</h4>
+            Los qubits aprovechan superposición y entrelazamiento para:
+            <ul>
+              <li>Resolver factores y optimizaciones en segundos.</li>
+              <li>Desafiar la criptografía clásica.</li>
+            </ul>
+            Aún en fase experimental, promete disrupción en ciencia y seguridad.
+          </div>
+        </div>
+      </div>
+
+      <!-- Ética y IA -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Ética & IA</h3>
+            <p>Responsabilidad & Sesgos</p>
+          </div>
+          <div class="card-back">
+            <h4>Impacto Social</h4>
+            La adopción de IA masiva plantea preguntas:
+            <ul>
+              <li><strong>Sesgo</strong>: datos históricos injustos.</li>
+              <li><strong>Transparencia</strong>: “caja negra” de modelos.</li>
+              <li><strong>Regulación</strong>: marco legal global.</li>
+            </ul>
+            Imprescindible abordar estos retos para un futuro tecnológico justo.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Historia de la Computación | Creado por Visio Comp</p>
+    <p>Contacto: ofvisioncomp@gmail.com</p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=61577572615308" target="_blank">
+        <img src="facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/visio_ncomp/" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // Habilita flip en móvil
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.querySelector('.card-inner').classList.toggle('touch-active');
+      });
+    });
+  </script>
+</body>
+</html>
