@@ -6,6 +6,62 @@
   <title>Línea de Tiempo - Historia de la Computación</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    /* —— Header Moderno —— */
+header {
+  background: linear-gradient(90deg, #001f3f, #4ca1af);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+.register-option .register-link {
+  background: #001f3f;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.register-option .register-link:hover {
+  background: #003058;
+}
+
     /* —— Ajustes para móviles —— */
 @media (max-width: 768px) {
   nav ul {
@@ -39,14 +95,23 @@
       color: #333;
     }
     /* Encabezado */
-    header {
-      position: relative;
-      background: linear-gradient(90deg, #2c3e50, #4ca1af);
-      padding: 20px;
-      text-align: center;
-      color: white;
-      font-size: 24px;
-      font-weight: bold;
+    <header>
+  <div class="header-logo">
+    <img src="extras/Logo.png" alt="Logo Visión Comp">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="lineadetiempo.html">Línea de Tiempo</a></li>
+      <li><a href="guayanay.html">Explorar</a></li>
+      <li><a href="poi.html">Quizz</a></li>
+    </ul>
+  </nav>
+  <div class="register-option">
+    <a href="Registro.html" class="register-link">Registrarse</a>
+  </div>
+</header>
+
     }
     /* Botón Regresar */
     .back-home {
